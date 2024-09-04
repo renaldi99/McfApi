@@ -2,5 +2,11 @@
 
 echo "Run Migration"
 
-sh "dotnet ef migrations add InitalCreate"
-sh "dotnet ef migrations database update"
+if [ -d ./McfApi ]; then
+    cd ./McfApi
+fi
+
+pwd
+ls -l -a
+dotnet ef migrations add InitalCreate
+dotnet ef database update

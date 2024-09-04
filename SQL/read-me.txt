@@ -12,3 +12,7 @@ Jalankan command:
 - dotnet ef migrations add InitalCreate
 
 - dotnet ef database update
+
+Or use shell script
+
+- sh efmigration.sh
