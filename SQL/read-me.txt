@@ -1,0 +1,14 @@
+Create Table di SQL Server bisa dilakukan 2 cara:
+
+1. Menggunakan script SQL generate ke SQL Server
+
+- Pastikan sudah menjalankan Create Database [Nama Database]
+- Execute Script Create Table SQL (sql_generate.text)
+
+2. Menggunakan Feature Migrations Entity Framework Core
+
+Jalankan command:
+
+- dotnet ef migrations add InitalCreate
+
+- dotnet ef database update
