@@ -54,6 +54,13 @@ namespace McfApi.Services
             }
         }
 
+        public async Task<BPKBModel> GetBpkbByAgreementNumber(int agreement_number)
+        {
+            var result = await _repository.FindByIdAsync(agreement_number);
+
+            return result;
+        }
+
         public async Task<IEnumerable<BPKBModel>> GetListBpkb()
         {
             var result = await _repository.FindAllAsync();

@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
 namespace McfApi.DTOs
 {
 	public class BPKBDto
@@ -14,7 +16,6 @@ namespace McfApi.DTOs
         public DateTime faktur_date { get; set; }
         public string police_no { get; set; }
         public int location_id { get; set; }
-
         public int user_id { get; set; }
     }
 }

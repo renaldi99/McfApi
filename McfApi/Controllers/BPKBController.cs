@@ -66,5 +66,14 @@ namespace McfApi.Controllers
 
             return Ok(new ResponseData { is_success = true, status_code = StatusCodes.Status200OK, message = "Success Get List Bpkb", data = result });
         }
+
+        // Get List BPKB
+        [HttpPost("[action]")]
+        public async Task<IActionResult> GetDataBpkbByAgreementNumber([FromQuery] int agreement_number)
+        {
+            var result = await _service.GetBpkbByAgreementNumber(agreement_number);
+
+            return Ok(new ResponseData { is_success = true, status_code = StatusCodes.Status200OK, message = "Success Get Bpkb", data = result });
+        }
     }
 }
